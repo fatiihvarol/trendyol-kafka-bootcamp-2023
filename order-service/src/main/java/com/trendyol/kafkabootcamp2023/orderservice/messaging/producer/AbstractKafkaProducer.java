@@ -1,5 +1,6 @@
 package com.trendyol.kafkabootcamp2023.orderservice.messaging.producer;
 
+import com.trendyol.kafkabootcamp2023.orderservice.messaging.message.OrderDeliveredMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -44,4 +45,5 @@ public abstract class AbstractKafkaProducer<T> {
     }
 
     protected abstract String partitionKey(T message);
+
 }
